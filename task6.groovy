@@ -20,7 +20,7 @@ job("Job for Deployment") {
   description("Checks the language of code and deploys it on respective interpreter image.")
 
   triggers {
-    upstream("Pull from GitHub")
+    upstream("Job for GitHub")
   }
 
   steps {
@@ -32,7 +32,7 @@ job("Testing job") {
   description("Tests whether the page has been deployed or not.")
 
   triggers {
-    upstream("Deploy page")
+    upstream("Job for Deployment")
   }
 
   steps {
@@ -44,7 +44,7 @@ job("Mailing Job") {
   description("If site is not working, it will mail the developer. ")
 
   triggers {
-    upstream("Test job","FAILURE")
+    upstream("Testing job","FAILURE")
   }
 
   publishers {
@@ -54,7 +54,7 @@ job("Mailing Job") {
 
 buildPipelineView("Deploy_groovy") {
   title("Deploy webpage using Jenkins(auomated by groovy) and K8s")
-  selectedJob("Pull from GitHub")
+  selectedJob("Job for Github")
   displayedBuilds(1)
   refreshFrequency(4)
   alwaysAllowManualTrigger()
