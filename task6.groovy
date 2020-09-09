@@ -2,7 +2,7 @@ job("Pull from GitHub") {
   description("Pulls Codes and scripts From GitHub repository and copies them into a folder in base system.")
 
   scm {
-    github("SaranyaChattopadhyay/Jenkins-using-groovy", "master")
+    github("shyamwin/DevOpsTask6", "master")
   }
 
   triggers {
