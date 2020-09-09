@@ -1,4 +1,4 @@
-job("Pull from GitHub") {
+job("Job for GitHub") {
   description("Pulls Codes and scripts From GitHub repository and copies them into a folder in base system.")
 
   scm {
@@ -16,7 +16,7 @@ job("Pull from GitHub") {
   }
 }
 
-job("Deploy page") {
+job("Job for Deployment") {
   description("Checks the language of code and deploys it on respective interpreter image.")
 
   triggers {
@@ -28,7 +28,7 @@ job("Deploy page") {
   }
 }
 
-job("Test job") {
+job("Testing job") {
   description("Tests whether the page has been deployed or not.")
 
   triggers {
@@ -40,7 +40,7 @@ job("Test job") {
   }
 }
 
-job("Mailing") {
+job("Mailing Job") {
   description("If site is not working, it will mail the developer. ")
 
   triggers {
